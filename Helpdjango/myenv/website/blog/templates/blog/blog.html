@@ -1,0 +1,11 @@
+{% extends "blog/base.html" %}
+{% block content %}
+  {% for post in object_list %}
+    <div class="blog-post">
+      <h2>{{post.title}}</h2>
+      <h4>by {{post.author}}</h4>
+      <a href="/blog/{{post.id}}"<button type="button" class="btn btn-info btn-md">Read article</button></a>
+    </div>
+    <hr>
+  {% endfor %}
+{% endblock %}
